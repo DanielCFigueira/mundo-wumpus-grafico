@@ -95,7 +95,12 @@ public class Mundo {
     public void marcarVisitada(int linha, int coluna) {
         visitado[linha][coluna] = true;
     }
-
+    
+    /** Informar se o agente já esteve nesta casa. Usado só pela tela  */
+    public boolean estaVisitada(int linha, int coluna){
+        return visitado[linha][coluna];
+    }
+    
     /** Procura um elemento nas quatro posições vizinhas. */
     private boolean existeVizinho(int linha, int coluna, char procurado) {
         int[][] direcoes = {
